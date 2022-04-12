@@ -6,6 +6,7 @@ const cors = require('cors')
 // require route files
 const exampleRoutes = require('./app/routes/example_routes')
 const userRoutes = require('./app/routes/user_routes')
+const wholesaleRoutes = require('./app/routes/wholesale_routes')
 
 // require middleware
 const errorHandler = require('./lib/error_handler')
@@ -26,7 +27,7 @@ const clientDevPort = 7165
 // establish database connection
 // use new version of URL parser
 // use createIndex instead of deprecated ensureIndex
-mongoose.connect(db, {
+mongoose.connect('mongodb://localhost/roaster-wholesale-app', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true
@@ -58,6 +59,7 @@ app.use(requestLogger)
 // register route files
 app.use(exampleRoutes)
 app.use(userRoutes)
+app.use(wholesaleRoutes)
 
 // register error handling middleware
 // note that this comes after the route middlewares, because it needs to be
