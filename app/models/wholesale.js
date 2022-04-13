@@ -4,25 +4,32 @@
 
 const mongoose = require('mongoose')
 
-const wholesaleSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
+const wholesaleSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true
+    },
+    location: {
+      type: String,
+      required: true
+    },
+    roasts: {
+      type: String,
+      required: true
+    },
+    amount: {
+      type: Number,
+      required: true
+    },
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
+    }
   },
-  location: {
-    type: String,
-    required: true
-  },
-  roasts: {
-    type: String,
-    required: true
-  },
-  amount: {
-    type: Number,
-    required: true
+  {
+    timestamps: true
   }
-}, {
-  timestamps: true
-})
+)
 
 module.exports = mongoose.model('Wholesale', wholesaleSchema)

@@ -16,7 +16,8 @@ curl "http://localhost:4741/wholesales" \
       "name": "'"${NAME}"'",
       "location": "'"${LOCATION}"'",
       "roasts": "'"${ROASTS}"'",
-      "amount": "'"${AMOUNT}"'"
+      "amount": "'"${AMOUNT}"'",
+      "owner": "'"${OWNER}"'"
     }
   }'
 
