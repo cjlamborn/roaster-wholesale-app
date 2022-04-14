@@ -19,12 +19,13 @@ const wholesaleSchema = new mongoose.Schema(
       required: true
     },
     amount: {
-      type: Number,
+      type: String,
       required: true
     },
     owner: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User'
+      ref: 'User',
+      required: true
     }
   },
   {

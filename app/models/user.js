@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+// do i need to require in wholesale here to connect it to user?
 const userSchema = new mongoose.Schema({
   email: {
     type: String,

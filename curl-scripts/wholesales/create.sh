@@ -1,11 +1,9 @@
-# sh curl-scripts/index.sh
-# API="http://localhost:4741"
-# URL_PATH="/wholesales"
-# ${API}${URL_PATH}
-NAME="Place"
+TOKEN="f0231bfde7ce4b52b7027945f1d30576"
+NAME="Coffee Place"
 LOCATION="Chicago"
 ROASTS="Espresso"
 AMOUNT="1"
+OWNER="625733e5d804729046f88374"
 curl "http://localhost:4741/wholesales" \
   --include \
   --request POST \

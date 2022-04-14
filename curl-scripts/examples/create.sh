@@ -1,9 +1,8 @@
 #!/bin/bash
 
-API="http://localhost:4741"
-URL_PATH="/examples"
+EMAIL=
 
-curl "${API}${URL_PATH}" \
+curl "http://localhost:4741/sign-in" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
