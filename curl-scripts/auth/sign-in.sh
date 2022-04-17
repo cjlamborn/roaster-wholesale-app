@@ -1,6 +1,5 @@
 #!/bin/bash
-EMAIL="cj@mail.com"
-PASSWORD="banana"
+
 curl "http://localhost:4741/sign-in" \
   --include \
   --request POST \

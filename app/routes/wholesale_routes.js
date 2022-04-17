@@ -28,6 +28,13 @@ router.post('/wholesales', requireToken, (req, res, next) => {
 router.get('/wholesales', requireToken, (req, res, next) => {
   Wholesale.find()
   // check if the wholesale in this needs to end with an 's'
+    .then((items) => {
+      return items.filter((item) => {
+        console.log(item)
+        console.log(item.owner == req.user.id)
+        return item.owner == req.user.id
+      })
+    })
     .then(wholesale => res.status(200).json({ wholesale: wholesale }))
     .catch(next)
 })
