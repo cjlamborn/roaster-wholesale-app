@@ -1,6 +1,6 @@
 #!/bin/bash
-
-curl "http://localhost:4741/wholesales/${ID}" \
+# http://localhost:4741
+curl "https://polar-river-27993.herokuapp.com/wholesales/${ID}" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \

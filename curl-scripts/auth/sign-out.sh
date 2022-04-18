@@ -1,8 +1,4 @@
-#!/bin/bash
-
-
-
-curl "http://localhost:4741/sign-out" \
+curl "https://polar-river-27993.herokuapp.com/sign-out" \
   --include \
   --request DELETE \
   --header "Authorization: Bearer ${TOKEN}"

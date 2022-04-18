@@ -1,5 +1,5 @@
 
-curl "http://localhost:4741/wholesales" \
+curl "https://polar-river-27993.herokuapp.com/wholesales" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

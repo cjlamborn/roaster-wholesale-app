@@ -1,5 +1,5 @@
 
-curl "http://localhost:4741/change-password" \
+curl "https://polar-river-27993.herokuapp.com/change-password" \
   --include \
   --request PATCH \
   --header "Authorization: Bearer ${TOKEN}" \
