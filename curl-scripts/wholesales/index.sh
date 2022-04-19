@@ -1,5 +1,5 @@
 
-curl "https://polar-river-27993.herokuapp.com/wholesales" \
+curl "http://localhost:4741/wholesales" \
   --include \
   --request GET \
   --header "Authorization: Bearer ${TOKEN}"
